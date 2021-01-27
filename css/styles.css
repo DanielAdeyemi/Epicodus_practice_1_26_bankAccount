@@ -1,0 +1,16 @@
+.container, form, .alert {
+  margin-top: 30px;
+}
+
+.alert {
+  display: none;
+}
+
+input, label {
+  margin-right: 15px;
+  display: inline;
+}
+
+form, h2 {
+  text-align: center;
+}

@@ -54,6 +54,6 @@ $(document).ready(function() {
     bank.accounts[id].withdraw(withdraw);
     $("#move-money")[0].reset();
     $("#output").show();
-    $("#output").text("Your current ammount is $" + bank.accounts[id].amount);
+    $("#output").text("Your current amount is $" + bank.accounts[id].amount);
   });
 });
