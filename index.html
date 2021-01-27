@@ -13,30 +13,36 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md">
+      <div class="col-md-6">
         <form id="new-account">
           <label for="newName">Name</label>
           <input type="text" id="newName" required>
           <label for="initialDeposit">Initial Deposit</label>
           <input type="number" id="initialDeposit" min=0 required>
-          <button type="submit" class="btn btn-dark">Create account</button>
-        </form>
       </div>
-      <div class="col-md">
-        <form id="move-money">
-          <label for="id">ID Number:</label>
-          <input type="number" id="id">
-          <label for="deposit">Deposit Amount: </label>
-          <input type="number" id="deposit" min=0 value=0>
-          <label for="withdraw">Withdraw Amount:</label>
-          <input type="number" id="withdraw" min=0 value=0>
-          <button type="submit" class="btn btn-dark">Deposit or withdraw funds</button>
-        </form>
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-dark">Create account</button>
       </div>
-      <div class="col-md">
-        <div id="output"></div>
-      </div>
+      </form>
     </div>
+    <div class="col-md">
+      <form id="move-money">
+        <label for="id">ID Number:</label>
+        <input type="number" id="id">
+        <label for="deposit">Deposit Amount: </label>
+        <input type="number" id="deposit" min=0 value=0>
+        <label for="withdraw">Withdraw Amount:</label>
+        <input type="number" id="withdraw" min=0 value=0>
+        <button type="submit" class="btn btn-dark">Deposit or withdraw funds</button>
+      </form>
+    </div>
+    <div class="alert alert-success" role="alert">
+
+    </div>
+    <div class="alert alert-info" role="alert" id="output">
+
+    </div>
+  </div>
   </div>
 </body>
 
