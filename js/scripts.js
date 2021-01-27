@@ -39,7 +39,7 @@ $(document).ready(function() {
     const initialDeposit = parseInt($("#initialDeposit").val());
     let newAccount = new Account(name, initialDeposit);
     bank.addAccount(newAccount);
-    // alert(bank[1]);
+    $("#new-account")[0].reset();
   });
   $("#move-money").submit(function(event) {
     event.preventDefault();
@@ -48,6 +48,7 @@ $(document).ready(function() {
     const withdraw = parseInt($("#withdraw").val());
     bank.accounts[id].deposit(deposit);
     bank.accounts[id].withdraw(withdraw);
+    $("#move-money")[0].reset();
     $("#output").text("$" + bank.accounts[id].amount);
   });
 });
