@@ -36,14 +36,14 @@ $(document).ready(function() {
   $("#new-account").submit(function(event) {
     event.preventDefault();
     const name = $("#newName").val();
-    const initialDeposit = $("#initialDeposit").val();
+    const initialDeposit = parseInt($("#initialDeposit").val());
     let newAccount = new Account(name, initialDeposit);
     bank.addAccount(newAccount);
     // alert(bank[1]);
   });
   $("#move-money").submit(function(event) {
     event.preventDefault();
-    const id = parseInt($("id").val());
+    const id = parseInt($("#id").val());
     const deposit = parseInt($("#deposit").val());
     const withdraw = parseInt($("#withdraw").val());
     bank.accounts[id].deposit(deposit);
